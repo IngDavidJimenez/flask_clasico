@@ -11,9 +11,9 @@ Para que esto nos funcione correctamente necesitamos dos variables de entorno
 
 -Linux/Mac
     export FLASK_APP=hello
-    export FLASK_ENVIROMENT=development
-    export FLASK_DEBUG=1
-    esport FLASK_RUN_PORT=7777
+    export FLASK_ENV=development
+    export FLASK_DEBUG=True
+    export FLASK_RUN_PORT=7777
 -
     set FLASK_APP=hello
     set FLASK_ENVIROMENT=development
