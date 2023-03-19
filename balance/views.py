@@ -10,7 +10,26 @@ def home():
 @app.route('/nuevo')
 def add_movement():
     """
-    Crea un movimiento nuevo y lo carga
+    Crea un movimiento nuevo y lo carga en el archivo CSV
     """
-    return 'Lista de movimientos'
+    return 'Crea movimiento'
+@app.route('/modificar')
+def update():
+    """
+    Permite Editar los datos de un movimiento
+    """
+    return 'Actualizar Movimiento'
+@app.route('/borrar')
+def delete():
+    """
+    Elimina un movimiento existente
+    """
+    return 'Eliminar movimiento'
+#C-reate
+#R-ead
+#U-pdate
+#D-elete
+
+
+
 
