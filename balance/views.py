@@ -1,13 +1,16 @@
 from flask import render_template
 from . import app
-
+from .models import ListaMovimientos
 
 @app.route('/')
 def home():
     """
     Muestra la lista de movimientos cargados
     """
-    return render_template("inicio.html")
+    lista=ListaMovimientos()
+    lista.leer_desde_archivo()
+    #movimientos=lista.lista_movimientos
+    return render_template("inicio.html",movimientos=lista.lista_movimientos)
     #funcion para publicar html desde dependencia views controlador en base flask
 @app.route('/nuevo')
 def add_movement():

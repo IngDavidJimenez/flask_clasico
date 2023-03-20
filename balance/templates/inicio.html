@@ -20,6 +20,10 @@
     </style>
 </head>
 <body>
+
+    {# movimientos #}
+    
+
     <header>Balance de movimientos</header>
     <nav>
         Inicio | Nuevo
@@ -31,12 +35,14 @@
             <th>Tipo</th>
             <th>Cantidad</th>
         </tr>
+        {% for movimiento in movimientos %}
         <tr>
-            <td>20/02/2023</td>
-            <td>Cafe</td>
-            <td>G</td>
-            <td>1.25</td>
+            <td>{{ movimiento.fecha }}</td>
+            <td>{{ movimiento.concepto }}</td>
+            <td>{{ movimiento.ingreso_gasto }}</td>
+            <td>{{ movimiento.cantidad }}</td>
         </tr>
+        {% endfor %}
     </table>
     <footer>2023 Bootcamp Cero</footer>
 </body>
