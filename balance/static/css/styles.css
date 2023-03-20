@@ -2,8 +2,47 @@ header {
     background-color: #b8174c;
     color: whitesmoke;
     height: 50px;
-    font-size:large;
+    font-size: x-large;
     line-height: 50px;
     padding-left: 25px;
+    border: solid thin #19a187;
 
+}
+nav {
+    background-color: #19a187;
+    color: blue;
+    height: 25px;
+    font-size: medium;
+    line-height: 25px;
+    padding-left: 25px;
+    
+}
+
+main{
+    
+    max-width:800px;
+    margin:auto;
+    padding: 20px;
+
+}
+
+table.paper{
+    width: 100%;
+}
+.titulo-tab {
+    border-bottom: solid thin #19a187;
+    text-align: left;
+    text-decoration-style:wavy;
+}
+.pie-pagina {
+    padding: 20px;
+    border-top: solid thin blue;
+}
+.numero{
+    text-align: right;
+}
+.lista-vacia{
+    text-align: center;
+    padding: 20px;
+    color: #777;
 }

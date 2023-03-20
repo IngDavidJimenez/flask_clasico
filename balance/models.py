@@ -29,7 +29,7 @@ class ListaMovimientos:
         with open(RUTA_FICHERO,'r') as fichero:
             reader= csv.DictReader(fichero)
             for fila in reader:
-                print(fila['fecha'],fila['concepto'],fila['ingreso_gasto'],fila['cantidad'])
+                #print(fila['fecha'],fila['concepto'],fila['ingreso_gasto'],fila['cantidad'])
                 self.lista_movimientos.append(fila)
 
     

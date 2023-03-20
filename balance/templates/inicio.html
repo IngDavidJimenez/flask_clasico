@@ -30,22 +30,37 @@
     <nav>
         Inicio | Nuevo
     </nav>
-    <table class="lista">
-        <tr>
-            <th>Fecha</th>
-            <th>Concepto</th>
-            <th>Tipo</th>
-            <th>Cantidad</th>
-        </tr>
-        {% for movimiento in movimientos %}
-        <tr>
-            <td>{{ movimiento.fecha }}</td>
-            <td>{{ movimiento.concepto }}</td>
-            <td>{{ movimiento.ingreso_gasto }}</td>
-            <td>{{ movimiento.cantidad }}</td>
-        </tr>
-        {% endfor %}
-    </table>
-    <footer>2023 Bootcamp Cero</footer>
+
+    <main>
+        <table class="paper">
+            <tr>
+                <th class="titulo-tab">Fecha</th>
+                <th class="titulo-tab">Concepto</th>
+                <th class="titulo-tab">Tipo</th>
+                <th class="titulo-tab numero">Cantidad</th>
+            </tr>
+            {% if movimientos %}
+                {% for movimiento in movimientos %}
+                <tr>
+                    <td>{{ movimiento.fecha }}</td>
+                    <td>{{ movimiento.concepto }}</td>
+                    <td>
+                        {% if movimiento.ingreso_gasto == 'I' %}
+                        Ingreso
+                        {% else %}
+                        Gasto
+                        {% endif %}
+                    </td>
+                    <td class="numero">{{ movimiento.cantidad }}</td>
+                </tr>
+                {% endfor %}
+            {%else%}
+                <tr>
+                    <td colspan="4" class="lista-vacia">No hay movimientos para mostrar</td>
+                </tr>
+            {%endif%}
+        </table>
+    </main>
+    <footer class="pie-pagina">2023 Bootcamp Cero</footer>
 </body>
 </html>
