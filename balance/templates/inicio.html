@@ -42,7 +42,21 @@
             {% if movimientos %}
                 {% for movimiento in movimientos %}
                 <tr>
-                    <td>{{ movimiento.fecha }}</td>
+                    <td>
+                        {% if movimiento.fecha %}
+                        {{movimiento.fecha}}
+                        {% else %}
+                        <!-- <td></td> -->
+                            <!--<td colspan="2">-->
+                                {% for error in movimiento.errores %}
+                                <p class="error">
+                                    {{ error }}
+                                </p>
+                                {% endfor %}
+                        <!--    </td> -->
+                        {% endif %}
+                    </td>                
+
                     <td>{{ movimiento.concepto }}</td>
                     <td>
                         {% if movimiento.ingreso_gasto == 'I' %}
