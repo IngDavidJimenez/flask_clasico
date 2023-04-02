@@ -17,7 +17,12 @@ nav {
     padding-left: 25px;
     
 }
-
+nav a, nav a:active, nav a:focus,  nav a:visited {
+    color: white;
+} 
+nav a:hover {
+    color: blue;
+}
 main{
     
     max-width:800px;

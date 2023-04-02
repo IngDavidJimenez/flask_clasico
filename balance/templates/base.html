@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block head_title %}Balance APP{% endblock head_title %}</title>
+    <link rel="stylesheet" href="static/css/flat-remix.css">
+    <link rel="stylesheet" href="static/css/styles.css">
+    <!--<style>
+        .lista {
+            border: solid thin black;
+            border-collapse: collapse;
+            margin: 16px 0;
+        }
+    
+        .lista td,
+        .lista th {
+            border: solid thin black;
+            padding: 8px;
+        }
+    </style> -->
+</head>
+
+<body>
+
+    {# movimientos #}
+
+
+    <header>Balance de movimientos</header>
+    <nav>
+        Inicio | <a href="/nuevo"> Nuevo</a>
+    </nav>
+
+    <main>
+        {% block page_title %}
+        <h1>App de movimientos</h1>
+        {% endblock page_title %}
+        {% block Content %}
+        {% endblock %}
+    </main>
+    <footer class="pie-pagina">2023 Bootcamp Cero</footer>
+</body>
+
+</html>
